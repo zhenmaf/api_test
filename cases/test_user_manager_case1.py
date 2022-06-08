@@ -3,6 +3,7 @@
 import unittest
 from api.user_manager import UserManager
 from loguru import logger
+from data.user_manager_data import UserManagerData
 
 class TestUserManager(unittest.TestCase):
 
@@ -12,8 +13,9 @@ class TestUserManager(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.user = UserManager()
         cls.user.login()
-        cls.username = 'testj06'
-        cls.new_username = 'testj16'
+        cls.username = UserManagerData.add_user_data.get('username')
+        cls.new_username = UserManagerData.add_user_data.get('new_user_name')
+        cls.password = UserManagerData.add_user_data.get('password')
 
 
 

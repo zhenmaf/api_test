@@ -10,7 +10,7 @@ test_report = 'test_report.html'
 if __name__ == '__main__':
 
     # 进行一次登录
-    base = Base
+    base = Base()
     base.login()
 
     # 创建一个套件
